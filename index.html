@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Romaryo | Links</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #1d4ed8);
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease infinite;
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        width: 420px;
+        max-width: 92%;
+        text-align: center;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        border-radius: 22px;
+        padding: 40px 28px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .profile {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        margin-bottom: 15px;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .profile:hover {
+        transform: scale(1.08);
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 28px;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        gap: 12px;
+        text-decoration: none;
+        color: white;
+        margin: 12px 0;
+        padding: 15px;
+        border-radius: 14px;
+        font-weight: 500;
+        transition: all 0.25s ease;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      }
+
+      .link i {
+        font-size: 20px;
+      }
+
+      .whatsapp {
+        background: #25d366;
+      }
+      .instagram {
+        background: linear-gradient(
+          45deg,
+          #f09433,
+          #e6683c,
+          #dc2743,
+          #cc2366,
+          #bc1888
+        );
+      }
+      .linkedin {
+        background: #0a66c2;
+      }
+      .facebook {
+        background: #1877f2;
+      }
+      .tiktok {
+        background: #000000;
+      }
+
+      .link:hover {
+        transform: translateY(-4px) scale(1.03);
+      }
+
+      .link:active {
+        transform: scale(0.97);
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        opacity: 0.7;
+      }
+
+      /* POPUP */
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .popup img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px black;
+        animation: zoom 0.3s ease;
+      }
+
+      @keyframes zoom {
+        from {
+          transform: scale(0.7);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      /* MOBILE RESPONSIVE */
+
+      @media (max-width: 480px) {
+        body {
+          padding: 20px;
+          align-items: flex-start;
+        }
+
+        .container {
+          width: 100%;
+          margin-top: 40px;
+        }
+
+        .card {
+          padding: 30px 20px;
+        }
+
+        .profile {
+          width: 90px;
+          height: 90px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        .subtitle {
+          font-size: 13px;
+        }
+
+        .link {
+          padding: 13px;
+          font-size: 14px;
+        }
+
+        .link i {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <img class="profile" src="PASS PHOTO.png" alt="Foto Profil Romaryo" onclick="openProfile()">
+
+        <h1>Romaryo</h1>
+        <p class="subtitle">Connect With Me</p>
+
+        <a
+          class="link whatsapp"
+          href="https://wa.me/6285263083144"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+        <a
+          class="link instagram"
+          href="https://www.instagram.com/rmaaryo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
+
+        <a
+          class="link linkedin"
+          href="https://www.linkedin.com/in/romaryo-maryo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+
+        <a
+          class="link facebook"
+          href="https://www.facebook.com/romaryo.romaryo.7399"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-facebook"></i>
+          Facebook
+        </a>
+
+        <a
+          class="link tiktok"
+          href="https://www.tiktok.com/@romaryo.r"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+          TikTok
+        </a>
+
+        <p class="footer">© 2026 Romaryo</p>
+      </div>
+    </div>
+
+    <!-- POPUP IMAGE -->
+    <div class="popup" id="profilePopup" onclick="closeProfile()">
+      <img src="PASS PHOTO.png" />
+    </div>
+
+    <script>
+      function openProfile() {
+        document.getElementById("profilePopup").style.display = "flex";
+      }
+
+      function closeProfile() {
+        document.getElementById("profilePopup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
